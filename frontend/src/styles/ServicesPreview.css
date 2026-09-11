@@ -1,0 +1,284 @@
+.services-preview {
+    position: relative;
+
+    padding:
+            110px 32px 120px;
+
+    background:
+            linear-gradient(
+                    180deg,
+                    #fbfaf7 0%,
+                    #f7f5f0 100%
+            );
+}
+
+.services-container {
+    width:
+            min(
+                    1240px,
+                    100%
+            );
+
+    margin: 0 auto;
+}
+
+.services-heading {
+    max-width: 720px;
+
+    margin:
+            0 auto 60px;
+
+    text-align: center;
+}
+
+.services-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: var(--primary-dark);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+.services-heading h2 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size:
+            clamp(
+                    36px,
+                    4vw,
+                    52px
+            );
+
+    line-height: 1.12;
+
+    letter-spacing: -0.045em;
+}
+
+.services-heading h2 span {
+    color: var(--primary);
+}
+
+.services-heading p {
+    max-width: 620px;
+
+    margin:
+            20px auto 0;
+
+    color: var(--text-muted);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+    gap: 24px;
+}
+
+.service-card {
+    position: relative;
+
+    min-height: 310px;
+
+    padding: 34px;
+
+    overflow: hidden;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f8f8f3
+            );
+
+    border:
+            1px solid
+            #e3e4dc;
+
+    border-radius: 24px;
+
+    box-shadow:
+            0 12px 35px
+            rgba(50, 60, 45, 0.06);
+
+    transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            border-color 0.25s ease;
+}
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -75px;
+    right: -75px;
+
+    width: 150px;
+    height: 150px;
+
+    background:
+            radial-gradient(
+                    circle,
+                    rgba(169, 181, 143, 0.23),
+                    transparent 68%
+            );
+
+    border-radius: 50%;
+}
+
+.service-card:hover {
+    transform:
+            translateY(-7px);
+
+    border-color:
+            #cdd4c1;
+
+    box-shadow:
+            0 22px 50px
+            rgba(50, 60, 45, 0.11);
+}
+
+.service-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 52px;
+    height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 26px;
+
+    color: white;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #68764f,
+                    #89976c
+            );
+
+    border-radius: 16px;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    box-shadow:
+            0 10px 24px
+            rgba(104, 118, 79, 0.22);
+}
+
+.service-card h3 {
+    position: relative;
+    z-index: 2;
+
+    margin:
+            0 0 14px;
+
+    color: #30392f;
+
+    font-size: 21px;
+
+    letter-spacing: -0.02em;
+}
+
+.service-card p {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    color: #747d72;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.service-link {
+    position: absolute;
+    z-index: 2;
+
+    left: 34px;
+    bottom: 30px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--primary-dark);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.service-link span {
+    transition:
+            transform 0.2s ease;
+}
+
+.service-card:hover
+.service-link span {
+    transform:
+            translateX(4px);
+}
+
+@media (max-width: 900px) {
+    .services-preview {
+        padding:
+                90px 24px 100px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 270px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-preview {
+        padding:
+                75px 18px 85px;
+    }
+
+    .services-heading {
+        margin-bottom: 42px;
+    }
+
+    .services-heading p {
+        font-size: 15px;
+    }
+
+    .service-card {
+        padding: 28px;
+    }
+
+    .service-link {
+        left: 28px;
+        bottom: 25px;
+    }
+}
